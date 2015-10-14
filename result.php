@@ -105,19 +105,19 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Mahlowat - Ergebnis</title>
+    <title>Elect-o-matic Canada 2015 - Results</title>
     <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
     <meta content="Mahlowat">
     
     <meta name="image_src" content="img/mahlowat_logo.png"/>
-    <meta name="description" content="Mein Mahlowat-Ergebnis"/>
+    <meta name="description" content="My Elect-o-Matic 2015 result"/>
     
-    <meta property="og:title" content="Mahlowat"/>
+    <meta property="og:title" content="Elect-o-matic Canada 2015"/>
     <meta property="og:type"  content="website"/>
     <meta property="og:image" content="img/mahlowat_logo.png"/>
     <meta property="og:url"   content=""/>
-    <meta property="og:site-name" content="akut-bonn.de"/>
-    <meta property="og:description" content="Mein Mahlowat-Ergebnis"/>
+    <meta property="og:site-name" content="canada2015.bundesnerdrichtendienst.de"/>
+    <meta property="og:description" content="My Elect-o-matic Canada 2015 result"/>
     
     
     <!--<link href="css/bootstrap.min.css" rel="stylesheet" media="screen">-->
@@ -141,16 +141,16 @@
       <div class="bottom-buffer top-buffer">
     <?php 
     if($bars_only){
-	echo "<h1>Ergebnis</h1>";
+	echo "<h1>Result</h1>";
     } else {
-	echo "<h1>Ergebnisse</h1>";
+	echo "<h1>Results</h1>";
     }
     ?>
     
         <ul class="pagination">
-            <li id="navi_overview" class="active"><a href="#overview" onclick="showOverview()">Übersicht</a></li>
+            <li id="navi_overview" class="active"><a href="#overview" onclick="showOverview()">Overview</a></li>
             <?php if(!$bars_only){?>
-            <li id="navi_detail" class=""><a href="#detail" onclick="showDetail()">Detailansicht</a></li>
+            <li id="navi_detail" class=""><a href="#detail" onclick="showDetail()">Details</a></li>
             <?php } ?>
         </ul>
     
@@ -161,16 +161,16 @@
 			<div class="modal-content">
 				<div class="modal-header">
 					<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
-					<h4 class="modal-title" id="myModalLabel">Hoppla...</h4>
+					<h4 class="modal-title" id="myModalLabel">Oups...</h4>
 				</div>
 				<div class="modal-body">
-					<p><strong>Anscheinend hast du keine Fragen beantwortet.</strong><br />
-					Entweder hast du diese Seite direkt aufgerufen, oder du hast die Thesen wirklich noch nicht bearbeitet.</p> 
-					<p>Falls letzteres zutrifft, möchten wir dir empfehlen, dies nun zu tun.</p>
+					<p><strong>Apparently you didn't answer any theses.</strong><br />
+					Either you accessed this page directly, or you really haven't answered any theses yet.</p> 
+					<p>If the latter is the case, we would like to invite you, to do it now.</p>
 				</div>
 				<div class="modal-footer">
-					<button type="button" class="btn" data-dismiss="modal" aria-hidden="true">Schließen</button>
-					<a href="mahlowat.php" class="btn btn-primary">Thesen bearbeiten</a>
+					<button type="button" class="btn" data-dismiss="modal" aria-hidden="true">Close</button>
+					<a href="mahlowat.php" class="btn btn-primary">Edit theses</a>
 				</div>
 			</div>
 		</div>
@@ -186,12 +186,12 @@
      <?php } ?>
      
      <?php if(!$bars_only){?>
-     <p><small>Nicht zufrieden mit dem Ergebnis? Vielleicht willst du die Thesen <a href="multiplier.php" onclick="callPage(event, 'multiplier.php', <?php echo "'$answerstring', '$count'";?>)" title="Gewichtung ändern">anders gewichten</a>.</small></p>
+     <p><small>Not happy with your result? Perhaps you would like to <a href="multiplier.php" onclick="callPage(event, 'multiplier.php', <?php echo "'$answerstring', '$count'";?>)" title="Mark theses as important to you">mark some theses as important to you</a>.</small></p>
      <?php } ?>
      
      <div id="result-bars">
      <table class="table table-bordered table-hover">
-     <tr><th style="width: 200px;">Liste</th><th style="width:100px">Punkte</th><th style="width:640px;">Punkte</th></tr>
+     <tr><th style="width: 200px;">Party</th><th style="width:100px">Points</th><th style="width:640px;">Points</th></tr>
             <?php
                   $top = calculate_points($data['answers'][0], $answers);
                   for($i = 0; $i < sizeof($data['answers']); $i++){
@@ -208,7 +208,7 @@
     <div id="result-table">
     <div class="panel panel-default">
 	<div class="panel-body">
-		Listen ein-/ausblenden:
+		Show/Hide parties:
 		<?php 
 			for($i = 0; $i < sizeof($data['lists']); $i = $i + 1){
 				$classname = string_to_css_classname($data['lists'][$i]['name']);
@@ -218,10 +218,10 @@
 	</div>
     </div>
     
-    <p><small>Thesen mit <span class="glyphicon glyphicon-star" title="Sternchen"></span> fandest du besonders wichtig.<br> Wenn du auf den Button mit dem Namen der These klickst, bekommst du die Statements der Listen in einer Übersicht angezeigt.</small></p>
+    <p><small>Theses with a <span class="glyphicon glyphicon-star" title="star"></span> have been deemed exceptionally important to you.<br> If you click the button with the thesis on it, you can see an overview of the the parties statements.</small></p>
     
     <table class="table table-bordered" id="resulttable">
-      <tr id="tableheader"><th> </th><th>Deine Wahl</th>
+      <tr id="tableheader"><th> </th><th>Your selection</th>
       <?php 
       
 		print_result_detail_table($answers, $data);
@@ -236,23 +236,22 @@
     <hr />
     
 	<div class="control-group alert alert-info">
-		<p><strong>Ergebnis teilen:</strong></p>
+		<p><strong>Share your result:</strong></p>
 		<div class="controls sharecontrols">
 			<input type="text" class="col-md-5 form-control" id="resultlink" placeholder="" value="<?php echo $sharelink; ?>">
 		</div>
-		<p><?php if($count === 'false'){ ?><strong>Achtung!</strong> Aus diesem Link kann man ablesen, welche Antworten du ausgewählt und wie du die Thesen gewichtet hast!<?php } ?>&nbsp;</p>
+		<p><?php if($count === 'false'){ ?><strong>Attention!</strong> By looking at this link, one can see which answers you selected and which ones have been deemed important by you!<?php } ?>&nbsp;</p>
 	</div>
     
     
     <div class="shariff" data-url="<?php echo $baseurl; ?>" data-referrer-track="<?php echo $sharelink; ?>"></div>
     <div class="text-right">
-      <small>Du kannst die Befragung 
-      <a href="index.php" title="Von vorn beginnen">neu starten</a><?php if($bars_only){echo '.';} else {?>,
-      deine 
-      <a href="mahlowat.php" onclick="callPage(event, 'mahlowat.php', <?php echo "'$answerstring', '$count'";?>)" title="Antworten ändern">Antworten ändern</a>
-      oder die 
-      <a href="multiplier.php" onclick="callPage(event, 'multiplier.php', <?php echo "'$answerstring', '$count'";?>)" title="Gewichtung ändern">Gewichtung anpassen</a>.<?php } ?><br />
-      Außerdem haben wir auch eine <a href="faq.php?from=result.php<?php if($share_via_id){echo $sharelink;}?>" onclick="callPage(event, 'faq.php?from=result.php<?php if($share_via_id){echo $sharelink;} echo "', '$answerstring', '$count'";?>)" title="FAQ">FAQ-Seite</a>.
+      <small>You can 
+      <a href="index.php" title="restart the interview">restart the interview</a><?php if($bars_only){echo '.';} else {?>,
+      <a href="mahlowat.php" onclick="callPage(event, 'mahlowat.php', <?php echo "'$answerstring', '$count'";?>)" title="change your answers">change your answers</a>
+      or
+      <a href="multiplier.php" onclick="callPage(event, 'multiplier.php', <?php echo "'$answerstring', '$count'";?>)" title="select the theses, that are important to you">select the theses, that are important to you</a>.<?php } ?><br />
+      There is also a collection of <a href="faq.php?from=result.php<?php if($share_via_id){echo $sharelink;}?>" onclick="callPage(event, 'faq.php?from=result.php<?php if($share_via_id){echo $sharelink;} echo "', '$answerstring', '$count'";?>)" title="frequently asked questions">FAQs</a>.
       </small>
     </div>
     </div>
@@ -305,6 +304,6 @@
      <?php } ?>
   </script>
   
-    <script src="shariff/shariff.min.js"></script>
+<!--    <script src="shariff/shariff.min.js"></script> -->
   </body>
 </html>

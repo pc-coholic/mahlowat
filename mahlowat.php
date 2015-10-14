@@ -79,7 +79,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Mahlowat</title>
+    <title>Elect-o-matic Canada 2015</title>
     <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
     <meta content="Mahlowat">
     <!--<link href="css/bootstrap.min.css" rel="stylesheet" media="screen">-->
@@ -100,13 +100,13 @@
 					<h4 class="modal-title" id="myModalLabel">Statistik</h4>
 				</div>
 				<div class="modal-body">
-					Erlaubst du, dass dein Aufruf für die Statistik gezählt wird?<br>
-					Falls du Nein auswählst, bist du lediglich als Logeintrag auf dem Server verewigt.<br>
-					<small><a href="faq.php#log" target="_blank">Ich will aber gar keinen Logeintrag!</a></small>
+					Are you okay with having your visit accounted in our statistics?<br>
+					If you are selecting No, only an entry in our logfile will be created.<br>
+					<small><a href="faq.php#log" target="_blank">But I don't even want an entry in the log-file!</a></small>
 				</div>
 				<div class="modal-footer">
-					<button type="button" class="btn btn-default" onclick="callResult(false)" style="width: 100px;"><span class="glyphicon glyphicon-remove"></span> Nein</button>
-					<button type="button" class="btn btn-primary" onclick="callResult(true)" style="width: 100px;"><span class="glyphicon glyphicon-ok"></span> Ja</button>
+					<button type="button" class="btn btn-default" onclick="callResult(false)" style="width: 100px;"><span class="glyphicon glyphicon-remove"></span> No</button>
+					<button type="button" class="btn btn-primary" onclick="callResult(true)" style="width: 100px;"><span class="glyphicon glyphicon-ok"></span> Yes</button>
 				</div>
 			</div>
 		</div>
@@ -121,31 +121,31 @@
 		
 		<?php print_thesesbox($theses); ?>
 
-		<p class='text-center'><button id="weight" type="button" class="btn btn-default" data-toggle="button">These doppelt gewichten</button></p>
+		<p class='text-center'><button id="weight" type="button" class="btn btn-default" data-toggle="button">This is important to me</button></p>
 
 			<div class="row">
 			<div class="col-xs-12 col-sm-2 col-md-2 col-md-offset-2 col-sm-offset-2 option">
-				<button id='yes' type='submit' class='btn btn-success btn-block' name='yes' onclick="nextThesis('a')"><span class="glyphicon glyphicon-thumbs-up"></span> Zustimmung</button>
+				<button id='yes' type='submit' class='btn btn-success btn-block' name='yes' onclick="nextThesis('a')"><span class="glyphicon glyphicon-thumbs-up"></span> Approval</button>
 			</div>
 			<div class="col-xs-12 col-sm-2 col-md-2 option">
 				<button id='neutral' type='submit' class='btn btn-warning btn-block' name='neutral' onclick="nextThesis('b')"><span class="glyphicon glyphicon-tree-deciduous"></span> Neutral</button>
 			</div>
 			<div class="col-xs-12 col-sm-2 col-md-2 option">
-				<button id='no' type='submit' class='btn btn-danger btn-block' name='no' onclick="nextThesis('c')"><span class="glyphicon glyphicon-thumbs-down"></span> Ablehnung</button>
+				<button id='no' type='submit' class='btn btn-danger btn-block' name='no' onclick="nextThesis('c')"><span class="glyphicon glyphicon-thumbs-down"></span> Disapproval</button>
 			</div>
 			<div class="col-xs-12 col-sm-2 col-md-2 option">
-				<button id='skip' type='submit' class='btn btn-default btn-block' name='skip' onclick="nextThesis('d')"><span class="glyphicon glyphicon-share-alt"></span> Überspringen</button>
+				<button id='skip' type='submit' class='btn btn-default btn-block' name='skip' onclick="nextThesis('d')"><span class="glyphicon glyphicon-share-alt"></span> Skip</button>
 			</div>
 			</div>
 		
 		
 		<div class="text-right">
 			<hr />
-			<small>Du kannst die Befragung 
-			<a href="index.php" title="Von vorn beginnen">neu starten</a>
-			oder den Rest der Thesen 
-			<a href="#" title="Auswertung anzeigen" onclick="gotoResultPage(resultArray)">überspringen</a>.<br />
-			Außerdem haben wir auch eine <a href="faq.php?from=mahlowat.php" onclick="gotoFAQPage(event, resultArray)" title="FAQ">FAQ-Seite</a>.
+			<small>You can  
+			<a href="index.php" title="restart the interview">restart the interview</a>
+			or 
+			<a href="#" title="Show results" onclick="gotoResultPage(resultArray)">skip the remaining theses</a>.<br />
+			There is also a collection of <a href="faq.php?from=mahlowat.php" onclick="gotoFAQPage(event, resultArray)" title="frequently asked questions">FAQs</a>.
 			</small>
 		
 		</div>
@@ -162,10 +162,10 @@
 		$('#weight').click(function(){
 			$('#weight').toggleClass('btn-default');
 			$('#weight').toggleClass('btn-info');
-			if($('#weight').text() == 'These doppelt gewichten'){
-				$('#weight').text('These wird doppelt gewichtet');
+			if($('#weight').text() == 'This is important to me'){
+				$('#weight').text('This is important to you');
 			} else {
-				$('#weight').text('These doppelt gewichten');
+				$('#weight').text('This is important to me');
 			}
 		});
 		$('.explanationbutton').click(function(event){
@@ -280,12 +280,12 @@
 			$('#weight').removeClass('btn-info');
 			$('#weight').addClass('btn-default');
 			$('#weight').removeClass('active');
-			$('#weight').text('These doppelt gewichten');
+			$('#weight').text('This is important to me');
 		} else {
 			$('#weight').addClass('btn-info');
 			$('#weight').removeClass('btn-default');
 			$('#weight').addClass('active');
-			$('#weight').text('These wird doppelt gewichtet');
+			$('#weight').text('This is important to you');
 		}
 		switch (code){
 			case 'a':

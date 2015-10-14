@@ -76,7 +76,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Mahlowat - Ergebnis</title>
+    <title>Elect-o-matic Canada 2015 - Results</title>
     <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
     <meta content="">
     <!--<link href="css/bootstrap.min.css" rel="stylesheet" media="screen">-->
@@ -99,13 +99,13 @@
 					<h4 class="modal-title">Hoppla...</h4>
 				</div>
 				<div class="modal-body">
-					<p><strong>Anscheinend hast du keine Fragen beantwortet.</strong><br />
-                  Entweder hast du diese Seite direkt aufgerufen, oder du hast die Thesen noch nicht bearbeitet.</p> 
-                  <p>Falls letzteres zutrifft, möchten wir dir empfehlen, dies nun zu tun.</p>
+					<p><strong>Apparently you didn't answer any theses.</strong><br />
+                  Either you accessed this page directly, or you really haven't answered any theses yet.</p> 
+                  <p>If the latter is the case, we would like to invite you, to do it now.</p>
 				</div>
 				<div class="modal-footer">
-					<button type="button" class="btn btn-default" data-dismiss="modal">Schließen</button>
-					<a href="mahlowat.php" class="btn btn-primary">Thesen bearbeiten</a>
+					<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+					<a href="mahlowat.php" class="btn btn-primary">Edit theses</a>
 				</div>
 			</div><!-- /.modal-content -->
 		</div><!-- /.modal-dialog -->
@@ -126,17 +126,17 @@
 	
       <div class="bottom-buffer top-buffer">
     
-    <h1>Ergebnisse</h1>
-    <p>Klicke auf die Titel, um die zugehörige These anzuzeigen.</p>
+    <h1>Results</h1>
+    <p>Click on the titel to show the corresponding thesis.</p>
       <table class="table table-bordered">
-            <tr><th style="width: 320px;">Deine Wahl</th><th>Doppelt gewichten</th>
+            <tr><th style="width: 320px;">Your choice</th><th>Importance</th>
             <?php 
             
       
             
             for($i = 0; $i < sizeof($ans); $i = $i + 1){
                   ($emph[$i] == 2) ? $active = "btn-info active" : $active = "btn-default";
-                  ($emph[$i] == 2) ? $multbutton = "These wird doppelt gewichtet" : $multbutton = "These doppelt gewichten";
+                  ($emph[$i] == 2) ? $multbutton = "This is important to me" : $multbutton = "This is important to you";
                   $btnclass = code_to_btnclass(char_to_value($ans[$i]));
                   $labelclass = code_to_labelclass($ans[$i]);
                   echo "<tr>";
@@ -148,15 +148,15 @@
             
             ?>     
       </table>
-      <button id="commit" class="btn btn-primary">Neu Auswerten</button>
+      <button id="commit" class="btn btn-primary">Recalculate result</button>
     
     <div class="text-right">
     <hr />
-      <small>Du kannst die Befragung 
-      <a href="index.php" title="Von vorn beginnen">neu starten</a>
-      oder deine
-      <a href="mahlowat.php" onclick="callPage(event, 'mahlowat.php', array2str(getResultArray()), <?php echo "'$count'"; ?>)" title="Antworten ändern">Antworten ändern</a>.<br />
-      Außerdem haben wir auch eine <a href="faq.php?from=multiplier.php" onclick="callPage(event, 'faq.php?from=multiplier.php', array2str(getResultArray()), <?php echo "'$count'"; ?>)" title="FAQ">FAQ-Seite</a>.
+      <small>You can 
+      <a href="index.php" title="restart the interview">restart the interview</a>
+      or
+      <a href="mahlowat.php" onclick="callPage(event, 'mahlowat.php', array2str(getResultArray()), <?php echo "'$count'"; ?>)" title="change your answers">change your answers</a>.<br />
+      There is also a collection of <a href="faq.php?from=multiplier.php" onclick="callPage(event, 'faq.php?from=multiplier.php', array2str(getResultArray()), <?php echo "'$count'"; ?>)" title="frequently asked questions">FAQs</a>.
       </small>
     </div>
     </div>
@@ -173,10 +173,10 @@
 	$('.weight').click(function(){
 		$(this).toggleClass('btn-default');
 		$(this).toggleClass('btn-info');
-		if($(this).text() == 'These doppelt gewichten'){
-			$(this).text('These wird doppelt gewichtet');
+		if($(this).text() == 'This is important to me'){
+			$(this).text('This is important to you');
 		} else {
-			$(this).text('These doppelt gewichten');
+			$(this).text('This is important to me');
 		}
 	});
 	

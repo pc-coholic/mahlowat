@@ -18,7 +18,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Mahlowat - FAQ</title>
+    <title>Elect-o-matic Canada 2015 - FAQs</title>
     <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
     <meta content="">
     <link href="css/bootstrap.min.css" rel="stylesheet" media="screen">
@@ -32,56 +32,49 @@
   <script src="js/mahlowat.js"></script>
   
   <div class="container" style="margin-top: 20px;">
-      <img src="img/mahlowat_logo.png" title="Mahlowat Logo" class="pull-right" onclick="changeText()"/>
+      <img src="img/mahlowat_logo.png" title="Elect-o-matic Canada 2015 Logo" class="pull-right" onclick="changeText()"/>
 	<p id="spruch" class="pull-right"></p>
       <div class="bottom-buffer top-buffer">
     
-    <h1>FAQ</h1>
+    <h1>FAQs</h1>
 
-    <h4>Wer macht den Mahlowat?</h4>
-    <p>Lorem Ipsum.</p>
+    <h4>Who created the Elect-o-matic Canada 2015?</h4>
+    <p><a href="http://github.com/pc-coholic/" target="_blank">Some guy</a> from Germany who didn't know, that there was already the <a href="http://www.boussoleelectorale.com/" target="_blank">Boussole électorale</a> around. Oh well...</p>
     
-    <h4>Wer hat die Thesen erarbeitet?</h4>
-    <p>Lorem Ipsum.</p>
+    <h4>Who created the theses?</h4>
+    <p>They are taken from the <a href="https://www.facebook.com/faitsobjectifs/" target="_blank">Unbiased Facts / Faits objectifs</a>-Facebook page.</p>
     
-    <h4>Wo kommen die Positionen der Gruppen her?</h4>
-    <p>Den an der Wahl teilnehmenden Gruppen wurden die Thesen mit der Bitte um Stellungnahme zugeleitet. Neben der reinen Positionierung (Zustimmung/Neutral/Ablehnung/Keine Stellungnahme) konnten sie ihre Position auch in einem kurzen Absatz erläutern.</p>
-    <p>Für ihre Stellungnahmen zu den Thesen sind die Gruppen selbst verantwortlich.</p>
+    <h4>Which election are we even talking about?</h4>
+    <p><a href="https://en.wikipedia.org/wiki/Canadian_federal_election,_2015" target="_blank">That one</a>.</p>
     
-    <h4>Von welcher Wahl reden wir hier überhaupt?</h4>
-    <p>Lorem Ipsum.</p>
+    <h4>Who wrote the code for this app?</h4>
+    <p>That other guy, <a href="http://hszemi.de" title="hszemi.de" target="_blank">Sven</a>. He know how to do that kind of stuff.</p>
     
-    <h4>Wer hat das hier programmiert?</h4>
-    <p>Der <a href="http://hszemi.de" title="hszemi.de" target="_blank">Sven</a>, weil der das kann.</p>
-    
-    <h4>Funktioniert das hier wie der "echte" Wahl-O-Mat der bpb?</h4>
-    <p>Es wurde versucht, die Punkteberechnung so wie beim "echten" Wahl-O-Mat zu gestalten.</p>
-    
-    <h4>Wie werden die Punkte berechnet?</h4>
-    <p>Die Antworten der Testperson (das bist du) werden mit den vorgegebenen Antworten der Gruppen abgeglichen.</p>
+    <h4>How are the points calculated?</h4>
+    <p>Your answeres are being compared to the ones of the political parties.</p>
     <ul>
-      <li>Stimmt die Antwort überein, werden der Gruppe 2 Punkte gutgeschrieben;</li>
-      <li>Weicht die Antwort leicht ab (Zustimmung/Neutral oder Neutral/Ablehnung), wird der Gruppe 1 Punkt gutgeschrieben;</li>
-      <li>Sind die Antworten entgegengesetzt oder hat eine Gruppe eine Frage nicht beantwortet, gibt es keine Punkte für die Gruppe.</li>
+      <li>If you selected the same answer, the party gets 2 points;</li>
+      <li>If your answer is only slightly off (Approval/Neutral or Neutral/Disapproval), the party gets 1 point;</li>
+      <li>If the answer is completly different of if a party hasn't answered, it gets no points at all.</li>
     </ul>
-    <p>Eine Frage, die die Testperson übersprungen hat, wird nicht gewertet. Entsprechend gibt es dann insgesamt weniger Punkte zu erreichen.</p>
-    <p>Eine Frage, die doppelt gewichtet werden soll, wird doppelt gewichtet, das heißt, für sie wird die doppelte Punktzahl gutgeschrieben (0/2/4). Entsprechend gibt es insgesamt mehr Punkte zu erreichen.</p>
+    <p>Questions you skip are not taken into consideration. This just results in less points.</p>
+    <p>Questions you deem important to you get double the points (0/2/4). This results in a higher total of points.</p>
     
     <div id='log'>
-    <h4>Werden meine Antworten gespeichert?</h4>
-    <p>Vor der Auswertung wirst du gefragt, ob wir deine Antworten speichern dürfen.<br>
-    Du kannst dann "Ja" auswählen, was bedeutet, dass wir deine Antwortkombination zusammen mit einer ID speichern, die aus deiner IP-Adresse und einem täglich wechselnden zufälligen Wert errechnet wird. Bereits am nächsten Tag kann dein Eintrag auf keinen Fall mehr einer konkreten IP-Adresse zugeordnet werden.<br>
-    Wenn du "Nein" auswählst, wird lediglich ein Zähler um 1 erhöht.</p>
+    <h4>Are my answers beeing saved?</h4>
+    <p>Bevore calculating your results, you are beeing asked if we can save your selection.<br>
+    If you select "Yes", your answeres are beeing saved with an ID, that is calculated from your IP-address and a daily changing value. The next day, no one can tell what you answered.<br>
+    If you select "No", we will just increment a counter by 1.</p>
     <p></p>
     
-    <h4>Ich möchte gar nicht gezählt werden!</h4>
-    <p>Unser Webserver legt bei jedem Seitenaufruf einen Log-Eintrag an, der unter anderem einen Zeitstempel, deine IP-Adresse und die aufgerufene URL enthält. Es wäre also unaufrichtig, dir vorzumachen, dass dein Aufruf des Mahlowat nicht gezählt wird. Der Mahlowat wurde jedoch so konzipiert, dass aus den Server-Logdateien nicht ersichtlich ist, welche Antworten du ausgewählt hast. Dies sehen wir tatsächlich nur, wenn du dem am Ende explizit zustimmst.</p>
+    <h4>But I don't want to counted at all!</h4>
+    <p>Our webserver is creating a log-entry every time someone access a page on this server. This entry contains the time, the IP-address and the accessed page. So it would be dishonest to pretend, that you accessing this website is not bing logged. But please be assured, that the Elect-o-matic has been built in such a way, that we cannot tell what answers you have selected by looking at the logfiles. We really can only see this data, if you agree to it at the end of the interview.</p>
     </div>
     
-    <h4>Ich habe einen Fehler gefunden!</h4>
-    <p>Dann solltest du das melden. Wir freuen uns über sachdienliche Hinweise.</p>
+    <h4>I found a mistake!</h4>
+    <p>That's great! Oh wait... No, it's not... But it also kinda is... Please <a href="mailto:martin@pc-coholic.de">tell us about it</a>!</p>
 
-    <a class="btn btn-primary" href="<?php echo $back; ?>" onclick="callPage(event, '<?php echo $back; ?>')" title="Zurück zum Mahlowat">Zurück zum Mahlowat</a>
+    <a class="btn btn-primary" href="<?php echo $back; ?>" onclick="callPage(event, '<?php echo $back; ?>')" title="Back to the Elect-o-matic Canada 2015">Back to the Elect-o-matic Canada 2015</a>
   </div>
   </div>
 

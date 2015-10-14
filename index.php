@@ -5,19 +5,19 @@ $baseurl = "http://" . $_SERVER['SERVER_NAME'] . $uri_parts[0];
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Mahlowat</title>
+    <title>Elect-o-matic Canada 2015</title>
     <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
-    <meta content="Mahlowat">
+    <meta content="Elect-o-matic Canada 2015">
     
     <meta name="image_src" content="img/mahlowat_logo.png"/>
-    <meta name="description" content="Der Mahlowat ist ein Angebot von XYZ und wurde auf Beschluss des XXXV. Studierendenparlaments der Uni Bonn entwickelt. Er ermöglicht es, zu ausgewählten Themen die eigenen Standpunkte mit denen der Listen abzugleichen, die zur Wahl antreten."/>
+    <meta name="description" content="Elect-o-matic Canada 2105 helps you compare select thesis of political parties in Canada."/>
     
-    <meta property="og:title" content="Mahlowat"/>
+    <meta property="og:title" content="Elect-o-matic Canada 2015"/>
     <meta property="og:type"  content="website"/>
     <meta property="og:image" content="img/mahlowat_logo.png"/>
     <meta property="og:url"   content=""/>
-    <meta property="og:site-name" content="example.com"/>
-    <meta property="og:description" content="Der Mahlowat ist ein Angebot von XYZ und wurde auf Beschluss des XXXV. Studierendenparlaments der Uni Bonn entwickelt. Er ermöglicht es, zu ausgewählten Themen die eigenen Standpunkte mit denen der Listen abzugleichen, die zur Wahl antreten."/>
+    <meta property="og:site-name" content="canada2015.bundesnerdrichtendienst.de"/>
+    <meta property="og:description" content="Elect-o-matic Canada 2105 helps you compare select thesis of political parties in Canada."/>
     
     <link href="css/bootstrap.min.css" rel="stylesheet" media="screen">
     <link rel="stylesheet" href="css/font-awesome.min.css">
@@ -35,26 +35,24 @@ $baseurl = "http://" . $_SERVER['SERVER_NAME'] . $uri_parts[0];
   
   <div class="text-center">
   
-    <img src="img/mahlowat_logo.png" title="Mahlowat Logo"/>
+    <img src="img/mahlowat_logo.png" title="Elect-o-matic logo"/>
     
-    <h1><small>Der</small> Mahlowat</h1>
+    <h1><small>The</small> Elect-o-matic</h1>
   </div>
-    <p>Der Mahlowat ist ein technisches Hilfsmittel, das es ermöglicht, zu ausgewählten Themen die eigenen Standpunkte mit denen der Listen abzugleichen, die zur $Wahl antreten.</p>
+    <p>Elect-o-matic Canada 2105 helps you compare select thesis of political parties in Canada.</p>
     
-    <p>Er ist selbstverständlich nur als Automat ohne Hirn zu verstehen und spricht keine Wahlempfehlungen aus.</p>
+    <p>Of course, this is just a stupid machine with no brain. As such, it cannot give you any recommandations who to vote for.</p>
     
-    <p>Lorem Ipsum.</p>
+    <p>All information presented on this page is provided without any guarentee regarding correctness.</p>
     
-    <p>Für ihre Stellungnahmen zu den Thesen sind die Listen selbst verantwortlich.</p>
-    
-    <p class="text-center"><a class="btn btn-large btn-primary" href="mahlowat.php" title="Mahlowat starten">Mit der Befragung beginnen!</a></p>
+    <p class="text-center"><a class="btn btn-large btn-primary" href="mahlowat.php" title="Start the Elect-o-matic">Start the interview!</a></p>
     
     <p class="text-center"><a href="faq.php" title="Fragen und Antworten"><small>FAQ</small></a></p>
     
     
     
-    <div class="shariff" data-url="<?php echo $baseurl; ?>" data-referrer-track=null></div>
-    <script src="shariff/shariff.min.js"></script>
+<!--    <div class="shariff" data-url="<?php echo $baseurl; ?>" data-referrer-track=null></div>
+    <script src="shariff/shariff.min.js"></script>-->
   </div>
   
   </body>

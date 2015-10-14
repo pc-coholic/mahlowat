@@ -21,7 +21,7 @@ function print_result_detail_table($answers, $data){
 		echo "</tr>\n";
 		
 		// Statements
-		echo "<tr class='multheseslong'><td class='mtl'></td><td class='mtl' colspan='".(sizeof($data['lists'])+1)."'><!--<span class='label $labelclass'>These ".($i+1).": ".$data['theses'][$i]['s']."</span><br>--> <p class='well'>".$data['theses'][$i]['l']."</p>";
+		echo "<tr class='multheseslong'><td class='mtl'></td><td class='mtl' colspan='".(sizeof($data['lists'])+1)."'><!--<span class='label $labelclass'>Thesis ".($i+1).": ".$data['theses'][$i]['s']."</span><br>--> <p class='well'>".$data['theses'][$i]['l']."</p>";
 		for($listid = 0; $listid < sizeof($data['lists']); $listid = $listid + 1){
 			echo get_list_statement($data, $listid ,$i);
 		}
@@ -40,7 +40,7 @@ function print_list_result_bar($data, $listindex, $answers, $class){
 	}
 	
 	echo "<tr class='$class'>
-	<td><b>$list_name</b></td><td>$list_points von $ach_points</td>
+	<td><b>$list_name</b></td><td>$list_points of $ach_points</td>
 	<td><div class='progress'>
 		<div class='progress-bar' role='progressbar' aria-valuenow='$list_points' aria-valuemin='0' aria-valuemax='$ach_points' style='width: $list_percentage%;'>
 			$list_percentage %
@@ -164,7 +164,7 @@ function print_thesesbox($theses, $form=false, $list=null){
 	
 	for($q_id = 0; $q_id < count($theses); $q_id++){
 		echo "<div id='thesis$q_id' class='singlethesis'>";
-		echo "<h1>These ".($q_id+1)."</h1>
+		echo "<h1>Thesis ".($q_id+1)."</h1>
 
 		<div class='well well-large statement'>
 		<p style='margin-bottom: 0px;' class='lead'>";
@@ -172,7 +172,7 @@ function print_thesesbox($theses, $form=false, $list=null){
 		echo $theses[$q_id]['l'];
 		echo "</p>";
 		if($theses[$q_id]['x'] != ''){
-			echo "<button class='btn btn-link explanationbutton'>Erklärung</button>\n";
+			echo "<button class='btn btn-link explanationbutton'>Explanation</button>\n";
 			echo "<div class='explic'>".$theses[$q_id]['x']."</div>";
 		}
 		echo "</div>";
