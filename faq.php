@@ -48,7 +48,7 @@
     <p><a href="https://en.wikipedia.org/wiki/Canadian_federal_election,_2015" target="_blank">That one</a>.</p>
     
     <h4>Who wrote the code for this app?</h4>
-    <p>That other guy, <a href="http://hszemi.de" title="hszemi.de" target="_blank">Sven</a>. He know how to do that kind of stuff.</p>
+    <p>That other guy, <a href="http://hszemi.de" title="hszemi.de" target="_blank">Sven</a>. He knows how to do that kind of stuff.</p>
     
     <h4>How are the points calculated?</h4>
     <p>Your answeres are being compared to the ones of the political parties.</p>
